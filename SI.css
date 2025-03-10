@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
     background-image: url(hatter.jpg);
     background-repeat: no-repeat;
@@ -25,6 +26,7 @@ body {
     outline-style: solid;
     outline-color: black;
     text-decoration: none;
+    flex-wrap: wrap;
 }
 .button {
     padding: 10px 20px;
@@ -39,22 +41,30 @@ body {
     text-rendering: inherit;
     text-decoration: none;
     vertical-align: middle;
+    flex-wrap: wrap;
+}
+
+.button:hover{
+    background-color: skyblue;
 }
 
 .button-bar button:hover {
     background-color: skyblue;
+    flex-wrap: wrap;
 }
 
 
 .button-icon-container {
     margin-right: 10px; 
     margin-left: 10px;
+    flex-wrap: wrap;
 }
 
 
 .button-bar .button-icon {
     width: 45px; 
     height: auto;
+    flex-wrap: wrap;
 }
 
 .content {
@@ -63,6 +73,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.226);
     max-width: 800px;
+    flex-wrap: wrap;
 }
 
 .content-container {
@@ -71,20 +82,22 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.295);
-    width: 70%;
-    display: flex;
     justify-content: center;
-    border-bottom: 100px;
-    height: 72%;
-    background-image: url(Főoldal\ háttér.jpg);
+    height: 100%;
+    width: 70%;
+    background-image: url(hatter.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    fill: url(Főoldal\ háttér.jpg);
+    fill: url(hatter.jpg);
     background-size: cover  ;
     background-color: white;
     outline-style: solid;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    top: 5%;
 }
 
 
@@ -94,27 +107,60 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 table{
-    font-size: 20px;
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    letter-spacing: 5px;
+    flex-wrap: wrap;
+    border-collapse: separate;
+    border-spacing: 17px;
 }
 
 h1{
     text-align: center;
     font-size: 40px;
     justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%); 
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 h2{
+    font-size: 35px;
     justify-content: center;
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
     font-weight: bold;
+    background-color: black;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .alsó {
@@ -129,6 +175,7 @@ h2{
     display: flex; 
     justify-content: space-between; 
     padding: 15px 0px;
+    flex-wrap: wrap;
 }
 
 p{
@@ -136,6 +183,7 @@ p{
     display: inline-block;
     flex: 1;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .alsó p {
@@ -150,6 +198,7 @@ p{
     font-size: 16px;
     border-radius: 5px;
     transition: 0.3s;
+    flex-wrap: wrap;
 }
 .alsó{
     display: flex;
@@ -161,7 +210,8 @@ p{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 175px;
     outline-style: solid;
-    outline-color: black; 
+    outline-color: black;
+    flex-wrap: wrap;
 
 }
 
@@ -172,3 +222,125 @@ body, html{
     align-items: center;
     background: url(Hatter.png) no-repeat center center/cover;
  }
+
+ @media (max-width: 768px) {
+    .button-bar {
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+       transform: translateY(-30%);
+    }
+    .button-bar a {
+        width: 50%;
+        text-align: center;
+        transform: translateY(0);
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .button-bar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background: white;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1000;
+
+    }
+    .button-bar.active{
+        display: flex;
+    }
+ 
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1100;
+        font-size: 30px;
+        background: none;
+        border: none;
+        background-color: white;
+        border-radius: 100px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+ 
+    .button-bar a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+    .content-container{
+        height: 50%;
+        max-width: 250px;
+        position: absolute;
+        width: 90%;
+        max-width: none;
+        position: relative;
+        height: auto;
+        padding: 10px;
+    }
+    h2{
+        max-width: 500px;
+        font-size: 24px;
+        max-width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+    h1{
+        max-width: 290px;
+        font-size: 24px;
+        max-width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+    table{
+        max-width: 250px;
+        width: 100%;
+        font-size: 20px;
+        position: relative;
+        top: 50%;
+        left: 5%;
+        transform: none;
+        border-spacing: 17px;
+        
+    }
+    .alsó{
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    .alsó p{
+        width: 95%;
+    }
+ 
+}
+
+.menu-container{
+    position: relative;
+}
+
+.menu-toggle {
+    display: block;
+    background-color: white;
+    border-radius: 100px;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+}
+ 
