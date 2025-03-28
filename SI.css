@@ -328,19 +328,17 @@ body, html{
         width: 95%;
     }
  
-}
+    .menu-toggle {
+        display: block;
+        background-color: white;
+        border-radius: 100px;
+        color: rgb(0, 0, 0);
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
 
-.menu-container{
-    position: relative;
+    .menu-container{
+        position: relative;
+    }
 }
-
-.menu-toggle {
-    display: block;
-    background-color: white;
-    border-radius: 100px;
-    color: rgb(0, 0, 0);
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-}
- 
