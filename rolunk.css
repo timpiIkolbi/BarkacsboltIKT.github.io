@@ -92,16 +92,19 @@ body {
     margin: 0; 
     flex: 1; 
     text-align: center;
-    padding: 10px 60px;
+    padding: 5px 10px;
+    border-width: 50%;
     border: none;
     background-color: darkblue;
     color: white;
     font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    flex-wrap: wrap;
+    width: 261px;
+    gap: 10px;
 }
-.alsó {
+.alsó{
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
@@ -111,9 +114,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 175px;
     outline-style: solid;
-    outline-color: black; 
+    outline-color: black;
+    flex-wrap: wrap;
+} 
 
-}
 .szoveg{
     font-size: 16px;
     font-family: serif;
