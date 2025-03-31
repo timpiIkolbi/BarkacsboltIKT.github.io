@@ -11,6 +11,10 @@ body {
     background-image: url(painting-3414655_1920.jpg);
 }
 
+.menu-toggle{
+    display: contents;
+}
+
 .button-bar {
     display: flex;
     gap: 10px;
@@ -23,6 +27,8 @@ body {
     outline-style: solid;
     outline-color: black;
     text-decoration: none;
+    flex-wrap: wrap;
+    width: 90%;
 }
 .button {
     padding: 10px 20px;
@@ -33,14 +39,32 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
-    text-align: center;
-    text-rendering: inherit;
     text-decoration: none;
-    vertical-align: middle;
+    flex-wrap: wrap;
+    width: 10%;
+}
+
+.button:hover{
+    background-color: skyblue;
 }
 
 .button-bar button:hover {
     background-color: skyblue;
+    flex-wrap: wrap;
+}
+
+
+.button-icon-container {
+    margin-right: 10px; 
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+
+
+.button-bar .button-icon {
+    width: 45px; 
+    height: auto;
+    flex-wrap: wrap;
 }
 
 .image-list-grid {
