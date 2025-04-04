@@ -79,6 +79,7 @@ body {
     max-width: 800px;
     outline-style: solid;
     outline-color: black;
+    height: ;
 }
 
 .image-list-grid li {
@@ -97,7 +98,7 @@ body {
 
 .image-list-grid img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 8px;
 }
