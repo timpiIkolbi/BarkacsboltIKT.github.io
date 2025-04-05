@@ -8,7 +8,30 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    background-image: url(rólunk\ háttér.jpg);
 }
+
+
+.menu-toggle {
+    display: none; 
+    padding: 10px;
+    background: white;
+    border: none;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    color: darkblue;
+    outline: none;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu-toggle:hover {
+    background-color: skyblue;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 
 .button-bar {
     display: flex;
@@ -21,8 +44,9 @@ body {
     margin-top: 30px;
     outline-style: solid;
     outline-color: black;
-    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
+
 .button {
     padding: 10px 20px;
     border: none;
@@ -35,28 +59,75 @@ body {
     text-align: center;
     text-rendering: inherit;
     text-decoration: none;
-    vertical-align: middle;
 }
 
-.button-bar button:hover {
+.button-bar .button:hover {
     background-color: skyblue;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
+.image-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.192);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    outline-style: solid;
+    outline-color: rgba(0, 0, 0, 0.397);
+}
 
+.image-list-grid li {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 35px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    background: white;
+    padding: 10px;
+}
+
+.image-list-grid li:hover {
+    transform: scale(1.05);
+}
+
+.image-list-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.image-list-grid span {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.bar-icon {
+    margin-right: 10px;
+}
 .alsó p {
     margin: 0; 
     flex: 1; 
     text-align: center;
-    padding: 10px 60px;
+    padding: 5px 10px;
+    border-width: 50%;
     border: none;
     background-color: darkblue;
     color: white;
     font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    flex-wrap: wrap;
 }
-.alsó {
+.alsó{
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
@@ -64,24 +135,94 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 600px;
+    margin-top: 175px;
     outline-style: solid;
-    outline-color: black; 
-
+    outline-color: black;
+    flex-wrap: wrap;
 }
 .szoveg{
-font-size: 25px;
-display: flex;
-align-items: center;
+    font-size: 16px;
+    font-family: serif;
 }
-.szoveg img{
-    margin-right: 15px;
+
+@media (max-width: 768px) {
+    .button-bar {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background: white;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .button-bar.active {
+        display: flex; 
+    }
+
+    .menu-toggle {
+        display: block; 
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1100;
+    }
+
+    .button-bar a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: white; 
+        text-decoration: none;
+    }
+
+    .image-list-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        list-style: none;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.192);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+        outline-style: solid;
+        outline-color: rgba(0, 0, 0, 0.397);
+    }
+
+    .image-list-grid img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 100%;
+    }
+
+    .alsó {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .alsó p {
+        width: 95%;
+    }
 }
-.szoveg2 img{
-    margin: left 15px;
-}
-.szoveg2{
-    font-size: 25px;
-    display: flex;
-    align-items: center;
+
+@media (min-width: 769px) {
+    .button-bar {
+        display: flex !important;
+        justify-content: flex-start;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
 }

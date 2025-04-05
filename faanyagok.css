@@ -8,11 +8,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-image: url(painting-3414655_1920.jpg);
-}
-
-.menu-toggle{
-    display: contents;
+    background-image: url(Faanyagok\ Háttér.jpg);
 }
 
 .button-bar {
@@ -26,9 +22,7 @@ body {
     margin-top: 30px;
     outline-style: solid;
     outline-color: black;
-    text-decoration: none;
-    flex-wrap: wrap;
-    width: 90%;
+    transition: all 0.3s ease-in-out;
 }
 .button {
     padding: 10px 20px;
@@ -39,32 +33,16 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    text-align: center;
+    text-rendering: inherit;
     text-decoration: none;
-    flex-wrap: wrap;
-    width: 10%;
 }
 
-.button:hover{
+.button-bar .button:hover {
     background-color: skyblue;
-}
-
-.button-bar button:hover {
-    background-color: skyblue;
-    flex-wrap: wrap;
-}
-
-
-.button-icon-container {
-    margin-right: 10px; 
-    margin-left: 10px;
-    flex-wrap: wrap;
-}
-
-
-.button-bar .button-icon {
-    width: 45px; 
-    height: auto;
-    flex-wrap: wrap;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 .image-list-grid {
@@ -73,18 +51,18 @@ body {
     gap: 15px;
     list-style: none;
     padding: 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.192);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     outline-style: solid;
-    outline-color: black;
+    outline-color: rgba(0, 0, 0, 0.397);
 }
 
 .image-list-grid li {
     text-align: center;
     border: 2px solid #ccc;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     transition: transform 0.2s;
     background: white;
@@ -97,7 +75,7 @@ body {
 
 .image-list-grid img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     border-radius: 8px;
 }
@@ -117,16 +95,15 @@ body {
     flex: 1; 
     text-align: center;
     padding: 5px 10px;
-    border-width: 50%;
     border: none;
     background-color: darkblue;
     color: white;
     font-size: 16px;
     border-radius: 5px;
     transition: 0.3s;
-    flex-wrap: wrap;
+    border-width: 50%;
 }
-.alsó{
+.alsó {
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
@@ -134,13 +111,112 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 330px;
+    margin-top: 175px;
     outline-style: solid;
-    outline-color: black;
-    flex-wrap: wrap;
-    width: 90%;
+    outline-color: black; 
 }
 .szoveg{
     font-size: 16px;
     font-family: serif;
+}
+
+
+.menu-toggle {
+    display: none; 
+    padding: 10px;
+    background: white;
+    border: none;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    color: darkblue;
+    outline: none;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu-toggle:hover {
+    background-color: skyblue;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .button-bar {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background: white;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .button-bar.active {
+        display: flex; 
+    }
+
+    .menu-toggle {
+        display: block; 
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1100;
+    }
+
+    .button-bar a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: white; 
+        text-decoration: none;
+    }
+
+    .image-list-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        list-style: none;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.192);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        outline-style: solid;
+        outline-color: rgba(0, 0, 0, 0.397);
+    }
+    .image-list-grid img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+    .alsó{
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    .alsó p{
+        width: 95%;
+    }
+}
+
+@media (min-width: 769px) {
+    .button-bar {
+        display: flex !important;
+        justify-content: flex-start;
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
 }

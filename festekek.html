@@ -7,15 +7,21 @@
     <title>Festékek</title>
 </head>
 <body>
-    <div class="button-bar">
-        <div class="bar-icon">
-            <img src="KALApacs.png" alt="Barkácsáruház" width="50px" height="auto">
-        </div>
-        <a href="SI.html" class="button">Főoldal</a>
-        <a href="festekek.html" class="button">Festékek</a>
-        <a href="faanyagok.html" class="button">Faanyagok</a>
-        <a href="rolunk.html" class="button">Rólunk</a>
+    <div class="menu-container">
+        <button class="menu-toggle" onclick="toggleMenu()"><img src="KALApacs.png" alt="Barkácsáruház" width="30px" height="auto"></button>
     </div>
+
+        <div class="button-bar" id="buttonBar">
+            <div>
+                <img src="KALApacs.png" alt="Barkácsáruház" width="50px" height="auto">
+            </div>
+            <a href="SI.html" class="button">Főoldal</a>
+            <a href="festekek.html" class="button">Festékek</a>
+            <a href="faanyagok.html" class="button">Faanyagok</a>
+            <a href="rolunk.html" class="button">Rólunk</a>
+        </div>
+    </div>
+
 
     <ul class="image-list-grid">
         <li>
@@ -106,8 +112,16 @@
         <p>Telefon: +36-1-555-55-55</p>
     </footer>
 </body>
-<div class="hamburgerlista">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("buttonBar");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const menuToggle = document.querySelector(".menu-toggle");
@@ -118,5 +132,4 @@
             });
         });
         </script>
-</div>
 </html>
