@@ -79,7 +79,6 @@ body {
     max-width: 800px;
     outline-style: solid;
     outline-color: black;
-    height: ;
 }
 
 .image-list-grid li {
@@ -126,8 +125,6 @@ body {
     border-radius: 5px;
     transition: 0.3s;
     flex-wrap: wrap;
-    width: 261px;
-    gap: 10px;
 }
 .alsó{
     display: flex;
@@ -137,10 +134,11 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 195px;
+    margin-top: 330px;
     outline-style: solid;
     outline-color: black;
     flex-wrap: wrap;
+    width: 90%;
 }
 .szoveg{
     font-size: 16px;

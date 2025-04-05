@@ -8,7 +8,6 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-image: url(painting-3414655_1920.jpg);
 }
 
 .button-bar {
@@ -43,68 +42,21 @@ body {
     background-color: skyblue;
 }
 
-.image-list-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    list-style: none;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    outline-style: solid;
-    outline-color: black;
-}
 
-.image-list-grid li {
-    text-align: center;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s;
-    background: white;
-    padding: 10px;
-}
-
-.image-list-grid li:hover {
-    transform: scale(1.05);
-}
-
-.image-list-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
-
-.image-list-grid span {
-    display: block;
-    margin-top: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-.bar-icon {
-    margin-right: 10px;
-}
 .alsó p {
     margin: 0; 
     flex: 1; 
     text-align: center;
-    padding: 5px 10px;
-    border-width: 50%;
+    padding: 10px 60px;
     border: none;
     background-color: darkblue;
     color: white;
     font-size: 16px;
+    cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
-    flex-wrap: wrap;
-    width: 261px;
-    gap: 10px;
 }
-.alsó{
+.alsó {
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
@@ -112,13 +64,24 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 175px;
+    margin-top: 600px;
     outline-style: solid;
-    outline-color: black;
-    flex-wrap: wrap;
-} 
+    outline-color: black; 
 
+}
 .szoveg{
-    font-size: 16px;
-    font-family: serif;
+font-size: 25px;
+display: flex;
+align-items: center;
+}
+.szoveg img{
+    margin-right: 15px;
+}
+.szoveg2 img{
+    margin: left 15px;
+}
+.szoveg2{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
 }

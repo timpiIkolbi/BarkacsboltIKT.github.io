@@ -106,4 +106,17 @@
         <p>Telefon: +36-1-555-55-55</p>
     </footer>
 </body>
+<div class="hamburgerlista">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".button-bar");
+        
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("active");
+            });
+        });
+        </script>
+</div>
 </html>
