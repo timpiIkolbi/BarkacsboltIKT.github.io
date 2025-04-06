@@ -11,13 +11,13 @@ body {
     background-image: url(Festék\ Háttér.jpg);
 }
 
-/* Hamburger menü alapstílus */
+
 .menu-toggle {
-    display: none; /* Alapértelmezés szerint rejtve van */
+    display: none; 
     padding: 10px;
     background: white;
     border: none;
-    border-radius: 10px; /* Lekerekített négyzet */
+    border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 20px;
@@ -32,19 +32,19 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Button-bar alapstílus */
+
 .button-bar {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 30px; 
+    padding: 10px; 
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    margin-top: 30px; 
     outline-style: solid;
     outline-color: black;
-    transition: all 0.3s ease-in-out;
+    width: 90%; 
 }
 
 .button {
@@ -137,16 +137,16 @@ body {
     margin-top: 175px;
     outline-style: solid;
     outline-color: black; 
+    width: 90%; 
 }
 .szoveg{
     font-size: 16px;
     font-family: serif;
 }
 
-/* Mobil nézet stílusok */
 @media (max-width: 768px) {
     .button-bar {
-        display: none; /* Alapértelmezés szerint rejtve van */
+        display: none; 
         flex-direction: column;
         width: 100%;
         position: fixed;
@@ -160,11 +160,11 @@ body {
     }
 
     .button-bar.active {
-        display: flex; /* Láthatóvá tesszük, amikor aktív */
+        display: flex; 
     }
 
     .menu-toggle {
-        display: block; /* Láthatóvá tesszük a hamburger menüt */
+        display: block; 
         position: fixed;
         top: 15px;
         right: 15px;
@@ -176,13 +176,13 @@ body {
         text-align: center;
         width: 100%;
         display: block;
-        color: white; /* Szöveg színe fehér */
+        color: white; 
         text-decoration: none;
     }
 
     .image-list-grid {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         list-style: none;
         padding: 20px;
